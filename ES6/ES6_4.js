@@ -10,7 +10,7 @@ console.log(square(5));
 
 
 
-const full_name = (f_name,l_name) => console.log("My name is " + f_name +" "+ l_name);
+const full_name = (f_name,l_name) => console.log(`My name is ${f_name} ${l_name}`);
 
 full_name("Rupesh","Gelal");
 
