@@ -1,6 +1,6 @@
 const person = { //obj defined; key value pair
     name : '',
-    walk : function(){},
+    walk : function(){}, // old syntax
     talk(){} // method inside obj in ES6
 };
 
