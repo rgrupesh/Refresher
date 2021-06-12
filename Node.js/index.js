@@ -1,14 +1,14 @@
-// // import function/ objects
-// const call_api = require('./expo'); 
+// import function/ objects
+const call_api = require('./expo'); 
 
-// call_api("Github");
+call_api("Github");
 
-// const Logger = require('./expo');
-// const logger = new Logger();
+const Logger = require('./expo');
+const logger = new Logger();
 
-// logger.addListener("Broadcast",arg => console.log("Event occured", arg));
+logger.addListener("Broadcast",arg => console.log("Event occured", arg));
 
-// logger.log("Argument Passed");
+logger.log("Argument Passed");
 
 
 const http = require('http');

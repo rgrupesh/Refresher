@@ -1,11 +1,11 @@
-// /*wrapper function args:
-// exports,require,module,__filename,__dirname
-// */
-// function my_call(endpoint){
-//     console.log(`${endpoint} called!`)
-// }
-// // export function/ or object
-// module.exports = my_call; 
+/*wrapper function args:
+exports,require,module,__filename,__dirname
+*/
+function my_call(endpoint){
+    console.log(`${endpoint} called!`)
+}
+// export function/ or object
+module.exports = my_call; 
 
 const EventEmitter = require('events');
 

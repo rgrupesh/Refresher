@@ -1,6 +1,6 @@
-// function my_name(name){
-//     console.log(`Hello ${name}`);
-// }
+function my_name(name){
+    console.log(`Hello ${name}`);
+}
 
 const my_name = name => console.log(`Hello ${name}`);
 
