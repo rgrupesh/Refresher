@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import Stack from "./components/Stack/Stack";
 import NewStack from "./components/NewStack/NewStack";
@@ -13,17 +13,18 @@ import "./App.css";
 // }
 
 const App = () => {
-  const dataToPass = [
+
+  const [newItem, setNewItem] = useState([
     {key: 'dtp1', text: 'MongoDB'},
     {key: 'dtp2', text: 'Express'},
     {key: 'dtp3', text: 'Node'},
     {key: 'dtp4', text: 'React'}
 
-  ]
+  ]);
 
   const onAddStackHandler = (newData) => {
-    dataToPass.push(newData);
-    console.log(dataToPass);
+    // setNewItem(newItem.concat(newData));
+    setNewItem(prevItem => prevItem.concat(newData));
 
   };
 
@@ -31,7 +32,7 @@ const App = () => {
       <div className="stack-header">
       <h2>MERN STACK</h2>
       <NewStack onDataAdd={onAddStackHandler}/>
-      <Stack techStack={dataToPass}/>
+      <Stack techStack={newItem}/>
      </div>
   );
 };
