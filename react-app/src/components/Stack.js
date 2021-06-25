@@ -2,13 +2,14 @@ import React from "react";
 
 import "./Stack.css";
 
-const Stack = () => {
+const Stack = props => {
   return (
     <ul className="list-style">
-      <li>MongoDB</li>
-      <li>Express</li>
-      <li>React</li>
-      <li>MongoDB</li>
+      {props.techStack.map((stackItem) => {
+        return (
+          <h1 key={stackItem.key}>{stackItem.text}</h1>
+        )
+      })}
     </ul>
   );
 };
