@@ -1,6 +1,8 @@
 import React from "react";
 
-import Stack from "./components/Stack";
+import Stack from "./components/Stack/Stack";
+import NewStack from "./components/NewStack/NewStack";
+
 import "./App.css";
 
 //Old School
@@ -18,9 +20,17 @@ const App = () => {
     {key: 'dtp4', text: 'React'}
 
   ]
+
+  const onAddStackHandler = (newData) => {
+    dataToPass.push(newData);
+    console.log(dataToPass);
+
+  };
+
   return (
       <div className="stack-header">
       <h2>MERN STACK</h2>
+      <NewStack onDataAdd={onAddStackHandler}/>
       <Stack techStack={dataToPass}/>
      </div>
   );
